@@ -17,4 +17,22 @@ RSpec.describe DockingStation do
       expect(bike).to be_working
     end
   end
+<<<<<<< Updated upstream
 end
+=======
+
+  it 'expects bike to be working' do
+    docking_station = DockingStation.new
+    bike = docking_station.release_bike
+
+    result = bike.working?
+
+    expect(result).to eq true
+  end
+
+  it 'will respond to dock' do
+    expect(DockingStation.new).to respond_to(:dock).with(1).argument    
+  end
+  
+end 
+>>>>>>> Stashed changes
