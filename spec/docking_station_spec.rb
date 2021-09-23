@@ -10,21 +10,11 @@ RSpec.describe DockingStation do
   end
 
   describe '#release_bike' do
-    it 'returns a bike object' do
-      docking_station = DockingStation.new
+    it 'releases working bike' do
 
-      result = docking_station.release_bike
+      bike = subject.release_bike
 
-      expect(result).to be_a_kind_of(Bike)
+      expect(bike).to be_working
     end
-  end
-
-  it 'expects bike to be working' do
-    docking_station = DockingStation.new
-    bike = docking_station.release_bike
-
-    result = bike.working?
-
-    expect(result).to eq true
   end
 end
